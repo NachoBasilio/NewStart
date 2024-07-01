@@ -1,0 +1,53 @@
+---
+
+---
+<header class="header h-20">
+    <h1 class="header-title text-center">PostClass</h1>
+    <button class="header-burger absolute w-auto h-auto left-2 top-2 z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+            <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"></path>
+        </svg>
+    </button>
+    <nav class="absolute bg-red-400 h-full top-0 pt-10 hiddenSlide">
+        <ul class=" text-center p-2">
+            <li class="flex gap-4">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
+                <a href="/">Inicio</a>
+            </li>
+            <li class="flex gap-4">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-book"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6l0 13" /><path d="M12 6l0 13" /><path d="M21 6l0 13" /></svg>
+                <a href="/cursos">Cursos</a>
+            </li>
+            <li class="flex gap-4">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-users"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
+                <a href="/nosotros">Nosotros</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    const burger = document.querySelector('.header-burger');
+    const nav = document.querySelector('.header nav');
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('show');
+    });
+</script>
+
+<style>
+
+    .header-title{
+		font-size: 2rem;
+	}
+
+
+    .hiddenSlide{
+        left: -100%;
+        transition: left 0.5s;
+    }
+
+    .show{
+        left: 0;
+    }
+</style>
